@@ -9,11 +9,13 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --ff-kumbh: "Kumbh Sans", serif;
-  --fz-small: 0.8rem;
+  --fz-small: 0.9rem;
   --fz-normal: 1rem;
   --fz-big: 1.2rem;
   --fz-bigger: 1.6rem;
   --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
   --fw-700: 700;
 }
 
@@ -26,6 +28,7 @@
 body {
   line-height: 1.4;
   min-height: 100dvh;
+  font-family: var(--ff-kumbh);
 }
 
 ul, ol {
@@ -48,4 +51,70 @@ button {
 img {
   max-width: 100%;
   display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.nav__toggle-btn {
+  display: none;
+}
+.nav__wrapper, .nav__group {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+.nav__li {
+  padding-block: 2.3rem;
+}
+.nav__link {
+  padding-block: 2.3rem;
+  color: var(--dark-gray);
+  font-size: var(--fz-small);
+  font-weight: var(--fw-500);
+  border-bottom: 4px solid transparent;
+  transform-origin: bottom;
+  transition: all 200ms ease-in;
+}
+.nav__link:hover {
+  color: var(--dark-blue);
+  border-bottom: 4px solid var(--orange);
+}
+.nav__shopping-btn {
+  cursor: pointer;
+}
+.nav__user-btn {
+  cursor: pointer;
+  height: 3.2rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  border: 3px solid transparent;
+  background-image: url("../images/image-avatar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 150ms ease-out;
+}
+.nav__user-btn:hover {
+  border: 3px solid var(--orange);
+}
+
+.shopping-cart-icon {
+  fill: var(--dark-gray);
+  transition: all 150ms ease-out;
+}
+
+.shopping-cart-icon:hover {
+  fill: var(--dark-blue);
 }/*# sourceMappingURL=style.css.map */
